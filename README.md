@@ -49,6 +49,8 @@ Installed Ollama and pulled a lightweight, high-performance model optimized for 
 
 
 Go to Bash-->> curl -fsSL https://ollama.com/install.sh | sh
+
+
           -->> ollama pull qwen2.5:0.5b
 
 
@@ -68,6 +70,8 @@ Configured the backend to run as a background service, ensuring it auto-restarts
         -->> File: /etc/systemd/system/ollama-chat-api.service
         -->> Status Check: sudo systemctl status ollama-chat-api
 ________________________________________
+
+
 **Phase 2: The Frontend (AWS S3)**
 
 
@@ -124,19 +128,19 @@ ________________________________________
 Once inside the server, use these commands to control the AI backend:
 
 
-**Check Backend Status:** sudo systemctl status ollama-chat-api
+1. **Check Backend Status:** sudo systemctl status ollama-chat-api
 
 
-**View Live Logs:** 	sudo journalctl -u ollama-chat-api -f
+2. **View Live Logs:** 	sudo journalctl -u ollama-chat-api -f
 
 
-**Restart Backend:** 	sudo systemctl restart ollama-chat-api
+3. **Restart Backend:** 	sudo systemctl restart ollama-chat-api
 
 
-**Check Installed Models:**	ollama list
+4. **Check Installed Models:**	ollama list
 
 
-**Install New Model:**	ollama pull <model_name>
+5. **Install New Model:**	ollama pull <model_name>
 
 
 **Updating the Frontend**
